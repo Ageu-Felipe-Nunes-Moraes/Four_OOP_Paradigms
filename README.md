@@ -1,46 +1,46 @@
-# Programação Orientada a Objetos: Conceitos Fundamentais
+# Object-Oriented Programming: Fundamental Concepts
 
-Neste código, exploro os princípios essenciais da Programação Orientada a Objetos (POO) através da implementação de classes em Python. Vamos examinar cada um desses conceitos e como estão aplicados no código fornecido:
+In this code, I explore the essential principles of Object-Oriented Programming (OOP) through the implementation of classes in Python. We will examine each of these concepts and how they are applied in the provided code:
 
-## Abstração
+## Abstraction
 
-Abstração é o processo de destacar informações importantes enquanto oculta detalhes desnecessários. No código, vemos que as classes e métodos são projetados para focar nas funcionalidades essenciais de cada objeto, como fazer um som específico, sem se preocupar com a implementação interna.
+Abstraction is the process of highlighting important information while hiding unnecessary details. In the code, we see that the classes and methods are designed to focus on the essential functionalities of each object, such as making a specific sound, without worrying about the internal implementation.
 
-## Encapsulamento
+## Encapsulation
 
-O encapsulamento organiza o código de forma a proteger seus componentes internos, permitindo alterações futuras com menor impacto em outras partes do sistema. No código, as propriedades das classes são definidas como privadas (`_nome`) para controlar o acesso externo, seguindo o princípio do encapsulamento.
+Encapsulation organizes the code to protect its internal components, allowing future changes with minimal impact on other parts of the system. In the code, the properties of the classes are defined as private (`_name`) to control external access, following the principle of encapsulation.
 
-## Polimorfismo
+## Polymorphism
 
-O polimorfismo permite que objetos de diferentes classes sejam tratados de maneira uniforme, possibilitando que métodos com o mesmo nome se comportem de maneira diferente em cada classe. No exemplo, cada animal tem um método `fazer_som()`, que é polimórfico, produzindo sons distintos para cada tipo de animal.
+Polymorphism allows objects of different classes to be treated uniformly, enabling methods with the same name to behave differently in each class. In the example, each animal has a `make_sound()` method, which is polymorphic, producing different sounds for each type of animal.
 
-## Herança
+## Inheritance
 
-A herança permite que uma classe filha herde atributos e métodos de uma classe pai, promovendo reutilização de código e facilitando a organização hierárquica de objetos. No código, vemos a hierarquia de classes onde `AnimalSilvestre` e `AnimalDomestico` herdam de `Animal`, e `Cobra`, `Cachorro` e `Gato` herdam de `AnimalSilvestre` e `AnimalDomestico`, respectivamente.
+Inheritance allows a child class to inherit attributes and methods from a parent class, promoting code reuse and facilitating the hierarchical organization of objects. In the code, we see the class hierarchy where `WildAnimal` and `DomesticAnimal` inherit from `Animal`, and `Snake`, `Dog`, and `Cat` inherit from `WildAnimal` and `DomesticAnimal`, respectively.
 
-## Requisitos de Instalação
+## Installation Requirements
 
 - Python 3.x
 
-## Como Executar
+## How to Run
 
-1. Certifique-se de ter Python instalado em seu sistema.
-2. Clone ou baixe o repositório deste código.
-3. Execute o arquivo principal.
+1. Ensure Python is installed on your system.
+2. Clone or download the repository of this code.
+3. Run the main file.
 
-## Contribuições
+## Contributions
 
-Se deseja contribuir para o desenvolvimento deste código:
+If you wish to contribute to the development of this code:
 
-1. Fork o repositório.
-2. Faça suas modificações e melhorias no código.
-3. Teste suas alterações para garantir o funcionamento correto.
-4. Envie um pull request descrevendo as alterações feitas e suas justificativas.
+1. Fork the repository.
+2. Make your modifications and improvements to the code.
+3. Test your changes to ensure correct functionality.
+4. Submit a pull request describing the changes made and your justifications.
 
-## Autor
+## Author
 
-Este jogo foi desenvolvido por Ageu Felipe Nunes Moraes(eu) com o propósito de sintetizar ao máximo um dos conteúdos de POO, como parte de um projeto pessoal dedicado ao fortalecimento e amadurecimento da codificação. Para quaisquer dúvidas ou sugestões, por favor, entre em contato pelo e-mail [ageumoraes67@gmail.com].
+This project was developed by Ageu Felipe Nunes Moraes (me) with the purpose of synthesizing one of the OOP contents as much as possible, as part of a personal project dedicated to strengthening and maturing coding skills. For any questions or suggestions, please contact me at [ageumoraes67@gmail.com].
 
-## Aviso Legal
+## Disclaimer
 
-Este é um projeto de software desenvolvido por um indivíduo. Inspirado por atividade acadêmica passada durante aula.
+This is a software project developed by an individual, inspired by a past academic activity during a class.
