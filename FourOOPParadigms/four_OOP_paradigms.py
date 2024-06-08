@@ -1,12 +1,13 @@
-# CONCEITOS DE PROGRAMAÇÃO ORIENTADA A OBJETOS:
-# Abstração: o que importa dentro de um código é o que ele faz e não como ele faz
-# Encapsulamento: organizar o código de maneira inteligente de tal forma que alterações futuras sejam viáveis
-# Polimorfismo: quando uma classe possui a capacidade de se adaptar as necessidades de classes distintas
-# Herança: quando uma classe filha recebe como herança os métodos e atributos de uma classe pai para usar como se fossem dela
+# OBJECT-ORIENTED PROGRAMMING CONCEPTS:
+# Abstraction: what matters within a code is what it does, not how it does it
+# Encapsulation: organizing the code intelligently so that future changes are feasible
+# Polymorphism: when a class has the ability to adapt to the needs of different classes
+# Inheritance: when a child class inherits methods and attributes from a parent class to use as if they were its own
 
 
-# POLIMORFISMO, HERANÇA, ENCAPSULAMENTO E ABSTRAÇÃO
-# Classe pai(polimórfica)
+
+# POLYMORPHISM, INHERITANCE, ENCAPSULATION, AND ABSTRACTION
+# Parent class (polymorphic)
 class Animal:
     def __init__(self):
         return None
@@ -14,21 +15,21 @@ class Animal:
     def make_sound(self):
         print("--")
 
-# Classe filha da classe Animal e pai da classe Cobra
+# Child class of the Animal class and parent class of the Snake class
 class WildAnimal(Animal):
     def __init__(self, group, species):
         super().__init__()
         self._group = group
         self._species = species
 
-# Classe filha da classe Animal e pai da classe Cachorro e Gato
+# Child class of the Animal class and parent class of the Dog and Cat classes
 class DomesticAnimal(Animal):
     def __init__(self, animal_name, owner_name):
         super().__init__()
         self._animal_name = animal_name
         self._owner_name = owner_name
 
-# Classe filha da classe AnimalSilvestre e "neta" da Classe Animal
+# Child class of the WildAnimal class and "grandchild" of the Animal class
 class Snake(WildAnimal):
     def __init__(self, group, species):
         super().__init__(group, species)
@@ -40,7 +41,7 @@ class Snake(WildAnimal):
         print(f"GRUPO: {self.group}")
         print(f"ESPÉCIE: {self.species}")
 
-# Classe filha da classe AnimalDomestico e "neta" da Classe Animal
+# Child class of the DomesticAnimal class and "grandchild" of the Animal class
 class Dog(DomesticAnimal):
     def __init__(self, name, owner):
         super().__init__(name, owner)
@@ -52,7 +53,7 @@ class Dog(DomesticAnimal):
         print(f"NOME ANIMAL: {self.animal_name}")
         print(f"NOME DONO: {self.owner_nam}")
 
-# Classe filha da classe AnimalDomestico e "neta" da Classe Animal
+# Child class of the DomesticAnimal class and "grandchild" of the Animal class
 class Cat(DomesticAnimal):
     def __init__(self, name, owner):
         super().__init__(name, owner)
@@ -64,13 +65,14 @@ class Cat(DomesticAnimal):
         print(f"NOME ANIMAL: {self.animal_name}")
         print(f"NOME DONO: {self.owner_nam}")
 
-# IMPLEMENTAÇÃO DO MAIN
+# MAIN IMPLEMENTATION
+
 if __name__ == "__main__":
     animals = [Dog("BOLT", "LUIZ"), Cat("THUNDERCAT", "MÁRIO"), Snake("RÉPTIL", "COBRA")]
 
     for animal in animals:
         print(animal.make_sound())
 
-# É UM CÓDIGO QUE PODE FACILMENTE SER ALTERADO, FORTALECENDO CORRETAMENTE O CONCEITO DE ENCAPSULAMENTO
+# IT IS A CODE THAT CAN EASILY BE CHANGED, CORRECTLY STRENGTHENING THE CONCEPT OF ENCAPSULATION
 
-# É UM CÓDIGO QUE SE ABSTRAI DAS COMPLEXIDADES E DEMONSTRA O CONCEITO DE ABSTRAÇÃO
+# IT IS A CODE THAT ABSTRACTS AWAY THE COMPLEXITIES AND DEMONSTRATES THE CONCEPT OF ABSTRACTION
