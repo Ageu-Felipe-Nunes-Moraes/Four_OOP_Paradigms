@@ -11,65 +11,65 @@ class Animal:
     def __init__(self):
         return None
 
-    def fazer_som(self):
+    def make_sound(self):
         print("--")
 
 # Classe filha da classe Animal e pai da classe Cobra
-class AnimalSilvestre(Animal):
-    def __init__(self, grupo, especie):
+class WildAnimal(Animal):
+    def __init__(self, group, species):
         super().__init__()
-        self._grupo = grupo
-        self._especie = especie
+        self._group = group
+        self._species = species
 
 # Classe filha da classe Animal e pai da classe Cachorro e Gato
-class AnimalDomestico(Animal):
-    def __init__(self, nome_animal, nome_dono):
+class DomesticAnimal(Animal):
+    def __init__(self, animal_name, owner_name):
         super().__init__()
-        self._nome_animal = nome_animal
-        self._nome_dono = nome_dono
+        self._animal_name = animal_name
+        self._owner_name = owner_name
 
 # Classe filha da classe AnimalSilvestre e "neta" da Classe Animal
-class Cobra(AnimalSilvestre):
-    def __init__(self, grupo, especie):
-        super().__init__(grupo, especie)
+class Snake(WildAnimal):
+    def __init__(self, group, species):
+        super().__init__(group, species)
 
-    def fazer_som(self):
+    def make_sound(self):
         return "Ssssssssssssss!"
     
     def mostra_info(self):
-        print(f"GRUPO: {self.grupo}")
-        print(f"ESPÉCIE: {self.especie}")
+        print(f"GRUPO: {self.group}")
+        print(f"ESPÉCIE: {self.species}")
 
 # Classe filha da classe AnimalDomestico e "neta" da Classe Animal
-class Cachorro(AnimalDomestico):
-    def __init__(self, nome, dono):
-        super().__init__(nome, dono)
+class Dog(DomesticAnimal):
+    def __init__(self, name, owner):
+        super().__init__(name, owner)
 
-    def fazer_som(self):
+    def make_sound(self):
         return "Au Au!"
 
     def mostra_info(self):
-        print(f"NOME ANIMAL: {self.nome_animal}")
-        print(f"NOME DONO: {self.nome_dono}")
+        print(f"NOME ANIMAL: {self.animal_name}")
+        print(f"NOME DONO: {self.owner_nam}")
 
 # Classe filha da classe AnimalDomestico e "neta" da Classe Animal
-class Gato(AnimalDomestico):
-    def __init__(self, nome, dono):
-        super().__init__(nome, dono)
+class Cat(DomesticAnimal):
+    def __init__(self, name, owner):
+        super().__init__(name, owner)
 
-    def fazer_som(self):
+    def make_sound(self):
         return "Miau!"
     
     def mostra_info(self):
-        print(f"NOME ANIMAL: {self.nome_animal}")
-        print(f"NOME DONO: {self.nome_dono}")
+        print(f"NOME ANIMAL: {self.animal_name}")
+        print(f"NOME DONO: {self.owner_nam}")
 
 # IMPLEMENTAÇÃO DO MAIN
 if __name__ == "__main__":
-    animais = [Cachorro("BOLT", "LUIZ"), Gato("THUNDERCAT", "MÁRIO"), Cobra("RÉPTIL", "COBRA")]
+    animals = [Dog("BOLT", "LUIZ"), Cat("THUNDERCAT", "MÁRIO"), Snake("RÉPTIL", "COBRA")]
 
-    for animal in animais:
-        print(animal.fazer_som())
+    for animal in animals:
+        print(animal.make_sound())
 
 # É UM CÓDIGO QUE PODE FACILMENTE SER ALTERADO, FORTALECENDO CORRETAMENTE O CONCEITO DE ENCAPSULAMENTO
 
